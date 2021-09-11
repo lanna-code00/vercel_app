@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class OfferloanService {
 
-  api:any = 'http://localhost:8081/api/';
-  baseUrl:any = 'http://localhost:8000/api/' 
+  api:any = 'https://managerloan.herokuapp.com/api/';
+  baseUrl:any = 'https://managerloan.herokuapp.com/api/' 
 
   constructor(public http: HttpClient) { }
 

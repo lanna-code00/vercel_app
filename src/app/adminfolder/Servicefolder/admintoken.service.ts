@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class AdmintokenService {
 
   public iss = {
-    login:"http://localhost:8081/api/adminlogin",
-    signup:"http://localhost:8081/api/adminsignup"
+    login:"https://managerloan.herokuapp.com/api/adminlogin",
+    signup:"https://managerloan.herokuapp.com/api/adminsignup"
   }
 
   constructor() { }
