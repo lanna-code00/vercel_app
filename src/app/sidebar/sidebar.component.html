@@ -15,16 +15,16 @@
     </mat-toolbar>
     <mat-nav-list>
       <hr style="border: 2px solid #565656;" class="mt-5">
-      <a mat-list-item [routerLink]="['/login']" class="mr-2" *ngIf="!loggedIn">Login</a>
-      <a mat-list-item class="mt-2" [routerLink]="['/sidebar/dashboard']"><span class="fa fa-home p-2"></span> Home</a>
+      <a mat-list-item routerLink="/login" class="mr-2" *ngIf="!loggedIn">Login</a>
+      <a mat-list-item class="mt-2" routerLink="/sidebar/dashboard"><span class="fa fa-home p-2"></span> Home</a>
       <a mat-list-item class="mt-2 mr-2" (click)="loantransaction()"><span class="fa fa-coins p-2"></span>Your loans</a>
       <a mat-list-item class="mt-2 mr-2"><span class="fa fa-chart-line p-2"></span>Investment</a>
       <a mat-list-item class="mt-2 mr-2" (click)="routeToairtime()"><span class="fa fa-credit-card p-2"></span>Airtime recharge</a>
       <a mat-list-item class="mt-2 mr-2" (click)="billpayment()"><span class="fa fa-money-bill-alt p-2"></span>Bill payment</a>
-      <a mat-list-item class="mt-2 mr-2" *ngIf="showtab" [routerLink]="['/sidebar/atm-request']"><span class="fa fa-credit-card p-2"></span>Request ATM</a>
+      <a mat-list-item class="mt-2 mr-2" *ngIf="showtab" routerLink="/sidebar/atm-request"><span class="fa fa-credit-card p-2"></span>Request ATM</a>
       <a mat-list-item class="mt-2 mr-2" (click)="transaction()"><span class="fa fa-project-diagram p-2" ></span>Transactions</a>
       <a mat-list-item class="mt-2 mr-2" (click)="displaynotification()" ><span class="fa fa-bell p-2" [matBadge]="myvalue" matBadgeColor="warn"></span>Notifications</a>
-      <a mat-list-item class="mt-2 mr-2" [routerLink]="['/sidebar/contact']"><span class="fa fa-address-book p-2"></span>Contact us</a>
+      <a mat-list-item class="mt-2 mr-2" routerLink="/sidebar/contact"><span class="fa fa-address-book p-2"></span>Contact us</a>
       <a mat-list-item href="#" (click)="logout($event)" class="mt-2 mr-2" *ngIf="loggedIn"><span class="fa fa-sign-out-alt p-2"></span>TLogout</a>
     </mat-nav-list>
   </mat-sidenav>

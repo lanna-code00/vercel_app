@@ -33,6 +33,7 @@ export class UserloginComponent implements OnInit {
     this.api.login(this.form).subscribe(data => {
       this.handleLogin(data);
       if(data){
+        // this.route.navigate(['/sidebar/dashboard']);
         localStorage.setItem('loggedUser', JSON.stringify(data));
         this.load = false;
       }
