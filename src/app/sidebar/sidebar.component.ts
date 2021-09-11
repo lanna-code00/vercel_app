@@ -20,7 +20,7 @@ export class SidebarComponent {
       shareReplay()
     );
 
-    public loggedIn : boolean;
+    public loggedIn : boolean = false;
     public localstorage;
     public clientid;
     public firstalpha;
@@ -60,6 +60,10 @@ export class SidebarComponent {
     })
     
     let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
+    if (loggedUser) {
+      this.loggedIn = true;
+    }
 
     this.api.fetch_atms().subscribe((data:any) => {
       let myatmcheck = data.find((u) => u.id == loggedUser.user.id);

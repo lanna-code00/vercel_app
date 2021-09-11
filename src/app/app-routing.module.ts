@@ -62,7 +62,7 @@ const routes: Routes = [
   {path: 'admin_signup', component: AdminRegisterComponent},
   {path: 'admin_signin', component: AdminLoginComponent},
   
-  {path: 'admin_navigations', component: AdminsidebarComponent, canActivate:[AdminafterlogService], children: [
+  {path: 'admin_navigations', component: AdminsidebarComponent, children: [
       {path:'admindashboard', component: AdmindashboardComponent},
       {path:'request', component: RequestComponent},
       {path:'t&c', component: TermsconditionsComponent},
@@ -76,8 +76,8 @@ const routes: Routes = [
 // User router
   {path: 'login', component: UserloginComponent},
   {path: 'register', component: UserregComponent},
-
-  {path: 'sidebar', component: SidebarComponent, canActivate: [AfterLoginService], children: [
+//  canActivate: [AfterLoginService],
+  {path: 'sidebar', component: SidebarComponent, children: [
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: UserDashboardComponent},
     {path: 'profile', component: UserprofileComponent},
